@@ -52,7 +52,7 @@ jobs:
        sleep 5m
        ls
        pwd
-       cd /home/runner/work/TestForTerraform/TestForTerraform && terraform apply -auto-approve
+       cd /home/runner/work/TestForTerraform/TestForTerraform && terraform delete -auto-approve
        
   terraform-delete:
          name: 'Terraform-Delete'
