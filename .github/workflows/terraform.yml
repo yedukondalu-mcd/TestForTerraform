@@ -5,6 +5,7 @@ on:
     branches:
     - main
   pull_request:
+  workflow_dispatch:
 
 jobs:
   terraform:
@@ -63,5 +64,6 @@ jobs:
 
          - name : list of files and Present working directory
            run: |
-            ls
-            pwd
+             sleep 1m
+             ls
+             pwd
