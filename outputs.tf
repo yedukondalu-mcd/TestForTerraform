@@ -1,8 +1,11 @@
-
-output "Instance_IP" {
+output "Instance_ID" {
   value = aws_instance.myFirstInstance.id
 }
 
-output "Instance_region_Address" {
-    value = aws_eip.myFirstInstance.id
+output "Public_Instance_IP" {
+  value = aws_instance.myFirstInstance.public_ip
+}
+
+output "Private_Instance_IP" {
+  value = aws_instance.myFirstInstance.private_ip
 }
