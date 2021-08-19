@@ -32,6 +32,10 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
    # - name: Terraform Format
   #   run: terraform fmt -check
+    - name: Check list of files and present working directory
+      run:  |
+        ls
+        pwd
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
