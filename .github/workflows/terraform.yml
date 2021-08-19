@@ -64,6 +64,6 @@ jobs:
 
          - name : list of files and Present working directory
            run: |
-             sleep 1m
+             sleep 2m
              ls
              pwd
