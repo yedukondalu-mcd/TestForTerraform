@@ -46,4 +46,22 @@ jobs:
   #  - name: Terraform Apply 
    #   if: github.ref == 'refs/heads/main' && github.event_name == 'push'
    #   run: cd /home/runner/work/TestForTerraform/TestForTerraform && terraform apply -auto-approve
+   
+  terraform-delete:
+         name: 'Terraform-Delete'
+         runs-on: ubuntu-latest
+         needs: [terraform]
+         env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          
+          
+         steps:
+          # Checkout the repository to the GitHub Actions runner
+         - name: Checkout
+           uses: actions/checkout@v2
 
+         - name : list of files and Present working directory
+           run: |
+            ls
+            pwd
