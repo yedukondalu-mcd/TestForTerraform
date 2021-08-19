@@ -47,12 +47,12 @@ jobs:
     - name: Terraform Apply 
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: cd /home/runner/work/TestForTerraform/TestForTerraform && terraform apply -auto-approve
-    - name: Terraform delete after 5 minutes
+    - name: Terraform destroy after 5 minutes
       run: |
        sleep 5m
        ls
        pwd
-       cd /home/runner/work/TestForTerraform/TestForTerraform && terraform delete -auto-approve
+       cd /home/runner/work/TestForTerraform/TestForTerraform && terraform destroy -auto-approve
        
   terraform-delete:
          name: 'Terraform-Delete'
